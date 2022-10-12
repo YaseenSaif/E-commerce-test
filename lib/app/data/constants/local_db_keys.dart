@@ -1,0 +1,3 @@
+class LocalDBKeys {
+  LocalDBKeys._();
+}

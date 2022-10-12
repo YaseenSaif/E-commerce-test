@@ -1,0 +1,3 @@
+class ApiFields {
+  ApiFields._();
+}

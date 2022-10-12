@@ -1,0 +1,3 @@
+class FirebaseKeys {
+  FirebaseKeys._();
+}

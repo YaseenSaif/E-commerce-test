@@ -1,0 +1,3 @@
+class SharedStyle {
+  SharedStyle._();
+}

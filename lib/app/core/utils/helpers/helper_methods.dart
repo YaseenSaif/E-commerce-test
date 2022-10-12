@@ -1,0 +1,3 @@
+class HelperMethods {
+  HelperMethods._();
+}
