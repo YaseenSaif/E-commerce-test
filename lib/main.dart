@@ -1,10 +1,12 @@
 import 'package:e_commerse_app/app/core/values/launguages_and_localization/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'app/core/theme/app_theme.dart';
+import 'app/data/services/settings_service.dart';
 import 'app/data/services/translation_service.dart';
 import 'app/routes/app_pages.dart';
 
@@ -20,6 +22,7 @@ Future<void> initServices() async {
 
   /// services
   await Get.putAsync(() => TranslationService().init());
+  Get.put(SettingsService());
 }
 
 void main() async {
@@ -52,14 +55,18 @@ class MyApp extends StatelessWidget {
           getPages: AppPages.allRoutes,
           debugShowCheckedModeBanner: false,
           defaultTransition: Transition.cupertino,
-/*          localizationsDelegates: const [
+
+          /// translation
+          localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
           ],
           supportedLocales: Get.find<TranslationService>().supportedLocales(),
           translationsKeys: Get.find<TranslationService>().translations,
-          locale: Get.find<SettingsService>().getLocale(),
+          locale: Get.find<SettingsService>().getLocal(),
           fallbackLocale: Get.find<TranslationService>().fallbackLocale,
-          themeMode: Get.find<SettingsService>().getThemeMode(),*/
+
+          /// theme
+          themeMode: ThemeMode.light,
           theme: AppTheme.getLightTheme(),
           darkTheme: AppTheme.getDarkTheme(),
         );

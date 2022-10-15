@@ -22,7 +22,7 @@ class AppTheme {
                 borderRadius: BorderRadius.circular(10.0))),
         shadowColor: Colors.grey.withOpacity(0.5),
         radioTheme: RadioThemeData(
-            fillColor: MaterialStateProperty.all<Color>(AppColors.green)),
+            fillColor: MaterialStateProperty.all<Color>(AppColors.accent)),
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.black),
           elevation: 0.0,
@@ -85,7 +85,7 @@ class AppTheme {
               fontSize: 14.0.sp,
               color: Colors.black,
               fontWeight: FontWeight.w400),
-          caption: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+          caption: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w300),
           overline: TextStyle(
               fontSize: 10.0.sp,
               color: Colors.white,
@@ -109,7 +109,7 @@ class AppTheme {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0))),
         radioTheme: RadioThemeData(
-            fillColor: MaterialStateProperty.all<Color>(AppColors.green)),
+            fillColor: MaterialStateProperty.all<Color>(AppColors.accent)),
         appBarTheme: const AppBarTheme().copyWith(
             iconTheme: const IconThemeData(color: Colors.white),
             elevation: 0.0,
@@ -176,7 +176,7 @@ class AppTheme {
               color: Colors.white,
               fontWeight: FontWeight.w400),
           caption: TextStyle(
-            fontSize: 12,
+            fontSize: 12.sp,
             fontWeight: FontWeight.w300,
           ),
           overline: TextStyle(
